@@ -1,0 +1,80 @@
+.resource {
+    position: relative;
+    border-radius: 10px;
+
+    &-header {
+        display: flex;
+        height: calc(40% - 10px);
+        align-items: center;
+        justify-content: center;
+
+        margin: 10px;
+
+        &-image  {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 40%;
+            // max-width: calc(60%);
+            aspect-ratio: 1 / 1;
+            // max-height: 90%;
+            
+            opacity: 50%;
+        }
+
+        &-convert {
+            position: absolute;
+            right: 10px;
+        }
+    }
+
+    &-controls {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        margin: 10px 0;
+
+        width: 100%;
+        height: calc(60% - 10px);
+        transform: translate(-50%);
+
+
+        &-grid {
+            width: calc(100% - 20px);
+            height: 50%;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+
+            button {
+                @include Button;
+                height: 40%;
+                width: 30%;
+
+                min-height: 20px;
+
+                font-size: 1rem;
+                margin: 5px;
+            }
+
+            &-count {
+                width: 20%;
+                font-size: 2rem;
+            }
+
+            
+        }
+
+        &-grid:nth-of-type(2) {
+            background: rgba(154,98,58,255);
+            border-radius: 10px;
+        }
+
+       
+    }
+}

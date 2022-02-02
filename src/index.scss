@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: rgba(96,35,29,255);
+
+    font-family: 'Roboto', sans-serif;
+
+}
+
+@mixin Button {
+    background-color: rgb(223, 223, 223);
+    border: 2px outset rgb(117, 97, 79);
+    border-radius: 10px;
+
+    &:disabled {
+        border: 2px inset rgb(156, 117, 80);
+    }
+}
+
+@import 'views/App.scss';
+@import 'views/PlayerBoard.scss';
+@import 'views/ResourcePanel.scss';

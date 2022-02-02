@@ -1,0 +1,108 @@
+{
+  "name": "terraforming-mars-assistant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
+    "watch": "webpack --watch",
+    "server": "node server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "auto-bind": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "style-loader": "^3.3.1",
+    "three": "^0.137.5",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "cannon": "^0.6.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.4.0",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "html-webpack-plugin": "^5.3.2",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.2.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "settings": {
+      "import/parsers": {
+        "espree": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    },
+    "env": {
+      "node": true,
+      "browser": true,
+      "es6": true
+    },
+    "globals": {},
+    "rules": {
+      "no-console": 0,
+      "no-underscore-dangle": 0,
+      "curly": 0,
+      "object-curly-newline": 0,
+      "max-len": 0,
+      "class-methods-use-this": 0,
+      "no-lonely-if": 0,
+      "no-param-reassign": 0,
+      "no-nested-ternary": 0,
+      "camelcase": 0,
+      "no-restricted-properties": 0,
+      "no-alert": 0,
+      "consistent-return": 0,
+      "prefer-destructuring": 0,
+      "newline-per-chained-call": 0,
+      "import/prefer-default-export": 0,
+      "no-new": 0,
+      "new-cap": 0,
+      "brace-style": 0,
+      "no-return-assign": 0,
+      "operator-linebreak": 0,
+      "react/prop-types": 0,
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ]
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-idiomatic-order",
+    "rules": {
+      "indentation": 2,
+      "max-empty-lines": 1,
+      "selector-list-comma-newline-after": "never-multi-line"
+    }
+  }
+}
