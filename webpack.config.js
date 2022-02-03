@@ -7,7 +7,7 @@ module.exports = {
   mode: 'production',
   entry: '/src/index.js',
   output: {
-    path: path.resolve('./', 'dist'),
+    path: path.resolve('./', 'docs'),
   },
   module: {
     rules: [
@@ -54,6 +54,6 @@ module.exports = {
         { from: './src/assets/', to: 'assets/' },
       ],
     }),
-    new CleanWebpackPlugin(['./dist']),
+    new CleanWebpackPlugin(['./docs']),
   ],
 };
