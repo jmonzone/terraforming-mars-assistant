@@ -49,8 +49,9 @@ function SceneManager({ resources }, { current: cubeContainers }) {
     const y = top - 10 + height / 2;
 
     const centerPosition = screenToWorldPoint(x, y);
-    const randomOffset = new Vector3(getRandomRange(-1, 1), getRandomRange(-0.5, 0.5), 0.5);
-    const targetPosition = centerPosition.add(randomOffset);
+    // const randomOffset = new Vector3(getRandomRange(-0.1, 1), getRandomRange(-0.5, 0.5), 0.5);
+    // const targetPosition = centerPosition.add(randomOffset);
+    const targetPosition = centerPosition;
 
     // creates mesh renderer
     const { scene, world, envMap } = sceneInfo;
@@ -190,11 +191,11 @@ function SceneManager({ resources }, { current: cubeContainers }) {
           rotation: new CANNON.Vec3(1, 0, 0),
         },
         left: {
-          position: new Vector2(left - 10, centerY),
+          position: new Vector2(left, centerY),
           rotation: new CANNON.Vec3(0, 1, 0),
         },
         right: {
-          position: new Vector2(right - 10, centerY),
+          position: new Vector2(right, centerY),
           rotation: new CANNON.Vec3(0, 1, 0),
         },
         bottom: {
@@ -219,7 +220,7 @@ function SceneManager({ resources }, { current: cubeContainers }) {
 
       cubeContainers.forEach((cubeContainer) => {
         sides.forEach((side) => {
-          const size = 5;
+          const size = 10;
 
           const shape = new CANNON.Box(new CANNON.Vec3(size / 2, size / 2, 0.005));
           const collider = new CANNON.Body({ mass: 0, shape });

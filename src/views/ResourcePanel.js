@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-import { resourceTypes } from './Utility';
 
 function ResourcePanel({ state }, ref) {
   const { type, resource, setResource, production, setProduction, colors } = state;
@@ -13,10 +12,6 @@ function ResourcePanel({ state }, ref) {
       {intervals.map(interval => <button className="resource-controls-grid-button" key={interval} type="button" onClick={() => setNumber(number + interval)}>{`+${interval}`}</button>)}
     </div>
   );
-
-  const convertResource = () => {
-    setResource(resource - 8);
-  };
 
   return (
     <div className="resource" style={{ backgroundColor: colors.background }}>
